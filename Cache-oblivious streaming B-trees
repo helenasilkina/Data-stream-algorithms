@@ -1,4 +1,4 @@
-<a href="http://www.cs.cmu.edu/~jfineman/sbtree.pdf">Michael A. Bender, Martin Farach-Colton, Jeremy T. Fineman, Yonatan R. Fogel, Bradley C. Kuszmaul, Jelani Nelson Cache-Oblivious Streaming B-trees</a>
+1. <a href="http://www.cs.cmu.edu/~jfineman/sbtree.pdf">Michael A. Bender, Martin Farach-Colton, Jeremy T. Fineman, Yonatan R. Fogel, Bradley C. Kuszmaul, Jelani Nelson Cache-Oblivious Streaming B-trees</a>
 
   A streaming B-tree is a dictionary that efficiently implements insertions and range queries. We present two cache-oblivious streaming B-trees, the shuttle tree, and the cache-oblivious lookahead array (COLA).
   For block-transfer size B and on N elements, the shuttle tree implements searches in optimal O(log B+1N) transfers, range queries of L successive elements in optimal O(log B+1N +L/B) transfers, and insertions in O((log B+1N)/BΘ(1/(log log B)2)+(log2N)/B) transfers, which is an asymptotic speedup over traditional B-trees if B ≥ (log N)1+c log log log2 N for any constant c >1.
