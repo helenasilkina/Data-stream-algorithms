@@ -6,4 +6,7 @@
   A COLA implements searches in O(log N) transfers, range queries in O(log N + L/B) transfers, and insertions in amortized O((log N)/B) transfers, matching the bounds for a (cache-aware) buffered repository tree. A partially deamortized COLA matches these bounds but reduces the worst-case insertion cost to O(log N) if memory size M = Ω(log N). We also present a cache-aware version of the COLA, the lookahead array, which achieves the same bounds as Brodal and Fagerberg's (cache-aware) Bε-tree.
   
   We compare our COLA implementation to a traditional B-tree. Our COLA implementation runs 790 times faster for random inser-tions, 3.1 times slower for insertions of sorted data, and 3.5 times slower for searches.
+  
+  
+  The B-tree is the classic external-memory-dictionary data structure.1 The B-tree is typically analyzed in a two-level memory model, called the Disk Access Machine (DAM) model. The DAM model assumes an internal memory of size M organized into blocks of size B and an arbitrarily large external memory. The cost in the model is the number of transfers of blocks between the internal and external memory.
 
