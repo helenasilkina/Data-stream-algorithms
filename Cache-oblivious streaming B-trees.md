@@ -1,6 +1,4 @@
-The standard external-memory B-tree has branching factor B, and supports insertions, deletions, and searches in O(logb N).
-
-We build a static complete binary tree with Θ(N) leaves, stored according to the van Emde Boas layout, and a packed-memory structure representing the elements. The structure maintains a fixed one-to-one correspondence (bidirectional pointers) between the cells in the packed-memory structure and the leaves in the tree. Some of these cells/leaves are occupied by  elements, while others are blank. 
+The standard external-memory B-tree has branching factor B, and supports insertions, deletions, and searches in O(logb N). We build a static complete binary tree with Θ(N) leaves, stored according to the van Emde Boas layout, and a packed-memory structure representing the elements. The structure maintains a fixed one-to-one correspondence (bidirectional pointers) between the cells in the packed-memory structure and the leaves in the tree. Some of these cells/leaves are occupied by  elements, while others are blank. 
 
 Each internal node of the tree stores the maximum (nonblank) key of its two children, recursively. Thus, we can binary search through the tree, starting at the root, and at each step examining the key stored in the right child of the current node to decide whether to travel left or right. Because we stay entirely within the static search tree for a cost of O(logb N) memory transfers.
 
